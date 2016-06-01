@@ -13,7 +13,6 @@ namespace SJPCheck
 {
 	public partial class Form1 : Form
 	{
-		static NotifyIcon x; 
 		public Form1()
 		{
 			InitializeComponent();
@@ -26,7 +25,7 @@ namespace SJPCheck
 				Process.Start("chrome.exe", @"http:\\www.sjp.pl\" + txtSlowo.Text);
 
 				txtSlowo.Text = "";
-				x.Visible = true;
+				this.notifyIcon1.Visible = true;
 				this.Visible = false;
 				e.Handled = true;
 			}
@@ -40,7 +39,7 @@ namespace SJPCheck
 
 		private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
-			x.Visible = false;
+			this.notifyIcon1.Visible = false;
 			this.Show();
 			txtSlowo.Text = "";
 		}
@@ -48,12 +47,12 @@ namespace SJPCheck
 		private void Form1_Deactivate(object sender, EventArgs e)
 		{
 			this.Hide();
-			x.Visible = true;
+			this.notifyIcon1.Visible = true;
 		}
 
 		private void Form1_Shown(object sender, EventArgs e)
 		{
-			x = notifyIcon1;
+
 		}
 	}
 }
