@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.txtSlowo = new System.Windows.Forms.TextBox();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.SuspendLayout();
@@ -46,7 +45,7 @@
 			// 
 			// notifyIcon1
 			// 
-			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+			this.notifyIcon1.Icon = global::SJPCheck.Properties.Resources.ms_icon_2;
 			this.notifyIcon1.Text = "notifyIcon1";
 			this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
 			// 
@@ -62,8 +61,6 @@
 			this.Text = "Słowo do wyszukania";
 			this.TopMost = true;
 			this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
-			this.Shown += new System.EventHandler(this.Form1_Shown);
-			this.Resize += new System.EventHandler(this.Form1_Resize);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
