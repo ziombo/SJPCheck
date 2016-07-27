@@ -5,6 +5,13 @@ SJPCheck is a program created to quickly get word definitions from Polish online
   * Winforms
 2. Web Scraping
 
+# Usage
+Default hotkey to bring up the application is set to ALT+Q. To change it, change RegisterHotkey() on line 27 in the Form1.cs file.
+```cs
+ 		// register the alt + Q combination as hot key.
+	    hook.RegisterHotKey(SJPCheck.ModifierKeys.Alt, Keys.Q);
+```
+
 # Author
 Jan Radłowski
 
