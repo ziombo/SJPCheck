@@ -23,7 +23,7 @@ namespace SJPCheck
 			// register the event that is fired after the key press.
 			hook.KeyPressed +=
 				new EventHandler<KeyPressedEventArgs>(hook_KeyPressed);
-			// register the control + F12 combination as hot key.
+			// register the alt + Q combination as hot key.
 			hook.RegisterHotKey(SJPCheck.ModifierKeys.Alt, Keys.Q);
 		}
 
